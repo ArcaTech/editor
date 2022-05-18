@@ -1,8 +1,27 @@
 {
 	"name": "editor",
 	"version": "0.0.1",
-	"description": "CodeMirror 6 Editor",
+	"description": "CodeMirror 6 Markdown Editor",
+	"type": "module",
+	"scripts": {
+		"build": "npx rollup -c",
+		"serve": "node server.js"
+	},
 	"dependencies": {
-		"codemirror": "file:~/Projects/External/codemirror.next"
+		"@codemirror/autocomplete": "^0.20.0",
+		"@codemirror/commands": "^0.20.0",
+		"@codemirror/language": "^0.20.0",
+		"@codemirror/lint": "^0.20.1",
+		"@codemirror/search": "^0.20.1",
+		"@codemirror/state": "^0.20.0",
+		"@codemirror/view": "^0.20.3",
+		"express": "^4.18.0",
+		"lang-markdown": "file:../lang-markdown"
+	},
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^13.2.1",
+		"@rollup/plugin-typescript": "^8.3.2",
+		"rollup": "^2.70.2",
+		"typescript": "^4.6.4"
 	}
 }
